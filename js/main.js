@@ -26,6 +26,17 @@ function mousePressed() {
     value = (value===255 ? ('rgb(255,255,0)') : 255);
     word = (word==="Hello" ? "World" : "Hello");
 }
+
+function mouseClicked () {
+    if(word==="Hello") {
+        fill(255)
+    } else {
+        fill(0)
+        
+    }
+    textSize(100);
+    text(word, mouseX, 100);
+}
   
 function windowResized() {
 sketchWidth = document.getElementById("box").offsetWidth;
