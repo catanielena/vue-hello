@@ -1,0 +1,53 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* typo */
+@font-face {
+    font-family: BluuNext;
+    src: url(../font/BluuNext-Bolditalic.otf);
+}
+h1 {
+    font-family: BluuNext;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    line-height: 100vh;
+    text-align: center;
+    color: #FFF;
+    font-size: 4rem;  
+}
+/* common */
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: BLUE;
+}
+#box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+}
+.img-container {
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
