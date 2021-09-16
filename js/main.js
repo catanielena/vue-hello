@@ -13,25 +13,22 @@ function setup() {
     sketchHeight = document.getElementById("box").offsetHeight;
     createCanvas(sketchWidth, sketchHeight);
   }
-  
-  function draw() {
+let value = 255; 
+let word = "Hello";
+function draw() {
     blendMode(EXCLUSION);
+    fill(value);
     textSize(30);
-    fill(255, 255, 0);
-    text("Hello", mouseX, mouseY);
+    text(word, mouseX, mouseY);
 }
 
-function mouseClicked() {
-    textSize(30);
-    fill(255, 0, 0);
-    text("Hello", mouseX, mouseY);
-    // prevent default
-    return false;
-  }
+function mousePressed() {
+    value = (value===255 ? ('rgb(255,255,0)') : 255);
+    word = (word==="Hello" ? "World" : "Hello");
+}
   
-  
-  function windowResized() {
-    sketchWidth = document.getElementById("box").offsetWidth;
-    sketchHeight = document.getElementById("box").offsetHeight;
-    resizeCanvas(sketchWidth, sketchHeight);
-  }
+function windowResized() {
+sketchWidth = document.getElementById("box").offsetWidth;
+sketchHeight = document.getElementById("box").offsetHeight;
+resizeCanvas(sketchWidth, sketchHeight);
+}
